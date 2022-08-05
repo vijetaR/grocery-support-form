@@ -68,11 +68,6 @@ if (isset($_POST['submit'])) {
          $validate = false;
     }
 
-
-    if ($validate == true) {
-        $customerObj = new Customer();
-        $customerObj->add_customer_details();
-    }
 }
 function checkInput($input)
 {
