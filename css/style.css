@@ -7,7 +7,7 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  height: 100vh;
+  height: 127vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,32 +44,14 @@ body{
     padding: 6px 0;
     font-size: 14px;
 }
-.req-error{
-   color: red;
-    font-weight: 400;
-    display: inline-block;
-    padding: 6px 0;
-    font-size: 14px;
-}
 
-.text-area {
-    height: 100px;
-    width: 100%;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-}
+
 .department-details {
     margin-bottom: 15px;
 }
 .content form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 100%;
   margin: 20px 0 12px 0;
 }
 form .user-details .input-box{
@@ -83,7 +65,7 @@ form .input-box span.details{
 }
 .user-details .input-box input{
   height: 45px;
-  width: 100%;
+  width: 150%;
   outline: none;
   font-size: 16px;
   border-radius: 5px;
@@ -96,46 +78,19 @@ form .input-box span.details{
 .user-details .input-box input:valid{
   border-color: #9b59b6;
 }
- form .gender-details .dpt-title{
-  font-size: 20px;
-  font-weight: 500;
- }
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
+  ul.ul-list {
+    padding: 0 0 10px 20px;
 }
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: #9b59b6;
-   border-color: #d9d9d9;
- }
- /*form input[type="radio"]{
-   display: none;
- }*/
+.error-div {
+    margin: auto;
+}
  form .button{
    height: 45px;
-   margin: 35px 0
+   text-align: center;
  }
  form .button input{
    height: 100%;
-   width: 100%;
+   width: 50%;
    border-radius: 5px;
    border: none;
    color: #fff;
@@ -163,7 +118,7 @@ form .user-details .input-box{
   }
   .content form .user-details{
     max-height: 360px;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
   }
   .user-details::-webkit-scrollbar{
     width: 5px;
