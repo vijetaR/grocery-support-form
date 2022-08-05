@@ -10,67 +10,50 @@ include('includes/form-validation.php');
 <div class="content">
   <form action="" method="post">
     <div class="user-details">
-      <div class="input-box">
-        <div class="details">Name <span class="req-error">* </span></div>
-        <input type="text" name="name" placeholder="John Doe"  required>
-            <!-- Error -->
-            <?php
-                    echo $nameEmptyErr;
-                    echo $nameErr;
-            ?>
-      </div>
-      <div class="input-box">
-        <div class="details">Email <span class="req-error">* </span></div>
-        <input type="text" name="email" placeholder="example@example.com" required>
-        <!-- Error -->
-        <?php
-                 echo $emailEmptyErr;
-                 echo $emailErr;
+      <!---Errors--->
+      <div class="error-div"><?php  
+          echo $nameEmptyErr; echo $nameErr; 
+          echo $emailEmptyErr; echo $emailErr;
+          echo $phoneEmptyErr;echo $phoneErr;
+          echo $messageEmptyErr;
+          echo $DeptEmptyErr;
+          echo $subjectEmptyErr;
         ?>
       </div>
       <div class="input-box">
-        <div class="details">Phone Number <span class="req-error">* </span></div>
-        <input type="text" name="phone" placeholder="95XXXXXXXX" required>
-        <!-- Error -->
-        <?php
-             echo $phoneEmptyErr;
-             echo $phoneErr;
-        ?>
+        <div class="details"> Full Name. </div>
+        <input type="text" name="name" placeholder="Namee"
+        value="<?php echo isset($_POST['name']) ? $_POST['name'] : '' ?>" required>
       </div>
       <div class="input-box">
-        <div class="details">Subject <span class="req-error">* </span></div>
-        <input type="text" name="subject" placeholder="Your Subject" required>
-        <!-- Error -->
-        <?php
-             echo $subjectEmptyErr;
-        ?>
+        <div class="details">Email Id</div>
+        <input type="text" name="email" placeholder="example@example.com" value="<?php echo isset($_POST['email']) ? $_POST['email'] : '' ?>" required>
+      </div>
+      <div class="input-box">
+        <div class="details">Phone No. </div>
+        <input type="text" name="phone" placeholder="Number only" value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : '' ?>" required>
+      </div>
+      <div class="input-box">
+        <div class="details">Messages. </div>
+        <input type="text" name="message" placeholder="Enter you're problem descrption or any coments" value="<?php echo isset($_POST['message']) ? $_POST['message'] : '' ?>" required>
+      </div>
+      <div class="input-box">
+        <div class="details">Dipartment
+          <ul class="ul-list">
+            <li>Billing.</li>
+            <li>Shiping</li>
+            <li>Qualiity</li>
+          </ul>
+        </div>
+        <input type="text" name="dept" placeholder="Enter Option" value="<?php echo isset($_POST['dept']) ? $_POST['dept'] : '' ?>"  required>
+      </div>
+      <div class="input-box">
+        <div class="details">Subjects </div>
+        <input type="text" name="subject" value="<?php echo isset($_POST['subject']) ? $_POST['subject'] : '' ?>" placeholder="You're Subject" required>
       </div>
     </div>
-     <div class="input-box">
-        <div class="department-details">
-          <div class="details">Department <span class="req-error">* </span></div>
-            <input type="radio" name="dept" value="billing">
-              <span class="department">Billing</span>
-            <input type="radio" name="dept" value="shipping">
-              <span class="department">Shipping</span>
-            <input type="radio" name="dept" value="quality">
-              <span class="department">Quality</span>
-          <!-- Error -->
-          <?php
-                 echo $DeptEmptyErr;
-            ?>
-      </div>
-    </div>
-     <div class="input-box">
-        <div class="details">Message <span class="req-error">* </span></div>
-        <textarea  class="text-area" name="message" rows="5" cols="100" placeholder="Share your Complaints, Queries & Concerns with us" required ></textarea>
-        <!-- Error -->
-        <?php
-             echo $messageEmptyErr;
-        ?>
-      </div>
     <div class="button">
-      <input type="submit" name ="submit" value="Register">
+      <input type="submit" name ="submit" value="Submeit">
     </div>
   </form>
 </div>

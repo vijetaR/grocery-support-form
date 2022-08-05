@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
         $nameEmptyErr = '<div class="error"> Name can not be left blank. </div>';
         $validate = false;
     } elseif (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-        $nameErr = '<div class="error"> Only letters and white space allowed. </div>';
+        $nameErr = '<div class="error"> Only letters and white space allowed in a Name. </div>';
         $validate = false;
     }
 
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
          $validate = false;
     }
 
-    //
+    //Message Validation
     if (empty($message)) {
          $messageEmptyErr = '<div class="error"> Message is required. </div>';
          $validate = false;
